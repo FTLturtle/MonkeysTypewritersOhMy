@@ -29,6 +29,11 @@ public class MonkeyTypewriter {
         Thread monkey3 = new Thread(unsafeCopier);
         Thread monkey4 = new Thread(unsafeCopier);
         Thread monkey5 = new Thread(unsafeCopier);
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         monkey1.start();
         monkey2.start();
         monkey3.start();
@@ -41,6 +46,11 @@ public class MonkeyTypewriter {
         Thread monkey8 = new Thread(safeCopier);
         Thread monkey9 = new Thread(safeCopier);
         Thread monkey10 = new Thread(safeCopier);
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         monkey6.start();
         monkey7.start();
         monkey8.start();
